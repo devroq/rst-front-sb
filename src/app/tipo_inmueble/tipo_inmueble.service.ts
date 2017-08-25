@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-import { Tipos_inmueble } from './tipos_inmueble';
+import { Tipo_inmueble } from './tipo_inmueble';
  
 @Injectable()
  
@@ -12,12 +12,12 @@ export class TipoInmuebleService {
   }
  
   private headers = new Headers({ 'Content-Type': 'application/json' });
-  private tiposInmuebleUrl = 'api/tipos_inmueble';
+  private tiposInmuebleUrl = 'api/tipo_inmueble';
  
-  getTiposInmueble(): Promise<Tipos_inmueble[]> {
+  getTiposInmueble(): Promise<Tipo_inmueble[]> {
     return this.http.get(this.tiposInmuebleUrl)
       .toPromise()
-      .then(response => response.json().data as Tipos_inmueble[])
+      .then(response => response.json().data as Tipo_inmueble[])
       .catch(this.handleError);
   }
  
@@ -29,7 +29,7 @@ export class TipoInmuebleService {
       .catch(this.handleError);
   }
  
-  createCrearTipoInmueble(tipo_inmueble: Tipo_inmueble): Promise<Tipos_inmueble> {
+  createCrearTipoInmueble(tipo_inmueble: Tipo_inmueble): Promise<Tipo_inmueble> {
     return this.http
       .post(this.tiposInmuebleUrl, JSON.stringify(tipo_inmueble), { headers: this.headers })
       .toPromise()
@@ -38,15 +38,15 @@ export class TipoInmuebleService {
   }
  
   updateTipoInmueble(tipo_inmueble: Tipo_inmueble): Promise<Tipo_inmueble> {
-    const url = `${this.tipos_inmueble}/${tipo_inmueble.id}`;
+    const url = `${this.tiposInmuebleUrl}/${tipo_inmueble.id}`;
     return this.http
-      .put(url, JSON.stringify(bike), { headers: this.headers })
+      .put(url, JSON.stringify(tipo_inmueble), { headers: this.headers })
       .toPromise()
-      .then(() => tipo_inmeuble)
+      .then(() => tipo_inmueble)
       .catch(this.handleError);
   }
  
-  deleteTipoInmueble(tipo_inmueble: TipoInmueble): Promise<void> {
+  deleteTipoInmueble(tipo_inmueble: Tipo_inmueble): Promise<void> {
     const url = `${this.tiposInmuebleUrl}/${tipo_inmueble.id}`;
     return this.http.delete(url, { headers: this.headers })
       .toPromise()

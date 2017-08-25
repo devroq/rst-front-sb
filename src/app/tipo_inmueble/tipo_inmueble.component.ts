@@ -14,7 +14,7 @@ import { TipoInmuebleService } from './tipo_inmueble.service';
 })
 export class TipoInmuebleComponent implements OnInit {
  
-  tipo_inmueble: tipo_inmueble;
+  tipo_inmueble: Tipo_inmueble;
  
   constructor(
     private tipoInmuebleService: TipoInmuebleService,
@@ -27,7 +27,7 @@ export class TipoInmuebleComponent implements OnInit {
       .subscribe(tipo_inmueble => this.tipo_inmueble = tipo_inmueble);
   }
   updateTipoInmueble(): void {
-    this.TipoInmuebleService.updateTipoInmueble(this.tipo_inmueble);
+    this.tipoInmuebleService.updateTipoInmueble(this.tipo_inmueble);
     this.goBack();
   }
   goBack(): void {
