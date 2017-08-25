@@ -19,9 +19,9 @@ export class AppComponent {
    		.map((res:Response) => res.json())
    }
    getTiposInmueble(){
-   	this.getData().subscribe(data => {
-   		console.log(data);
-   	    this.data = data             
+   	  this.getData().subscribe(data => {
+   		  console.log(data);
+   	      this.data = data             
    	    })
    }
 }
