@@ -6,7 +6,6 @@ import { Tipo_inmueble } from './tipo_inmueble';
 @Injectable()
  
 export class TipoInmuebleService {
- 
   constructor(private http: Http) {
        console.log("Constructing class...");
   }

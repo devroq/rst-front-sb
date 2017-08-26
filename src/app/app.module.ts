@@ -21,7 +21,7 @@ export function HttpLoaderFactory(http: Http) {
 @NgModule({
     declarations: [
         AppComponent,
-        TipoInmuebleComponent
+        TipoInmuebleComponent,        
     ],
     imports: [
         BrowserModule,
@@ -37,7 +37,7 @@ export function HttpLoaderFactory(http: Http) {
             }
         }) */
     ],
-    providers: [AuthGuard],
+    providers: [AuthGuard,TipoInmuebleService,],
     bootstrap: [AppComponent]
 })
 export class AppModule {
