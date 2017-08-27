@@ -13,8 +13,8 @@ const routes: Routes = [
     { path: 'login', loadChildren: './login/login.module#LoginModule' },
     { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
     { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
-    { path: '**', redirectTo: 'not-found' },
-    { path: 'tipo_inmueble', component: TipoInmuebleComponent }
+    { path: 'tipo_inmueble', component: TipoInmuebleComponent },
+    { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({
