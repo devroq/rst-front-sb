@@ -6,7 +6,7 @@ export function routerTransition() {
 
 export function slideToRight() {
     return trigger('routerTransition', [
-        state('void', style({})),
+        state('void', style({})), 
         state('*', style({})),
         transition(':enter', [
             style({ transform: 'translateX(-100%)' }),
