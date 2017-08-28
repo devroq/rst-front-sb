@@ -6,9 +6,7 @@ import { Tipo_inmueble } from './tipo_inmueble';
 @Injectable()
  
 export class TipoInmuebleService {
-  constructor(private http: Http) {
-       console.log("Constructing class...");
-  }
+  constructor(private http: Http) {}
  
   private headers = new Headers({ 'Content-Type': 'application/json' });
   private tiposInmuebleUrl = 'api/tipo_inmueble';

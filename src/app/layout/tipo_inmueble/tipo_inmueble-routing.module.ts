@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { TipoInmuebleComponent } from './tipo_inmueble.component';
 
 const routes: Routes = [
-    { path: '/tipo_inmueble', component: TipoInmuebleComponent }
+    { path: '', component: TipoInmuebleComponent }
 ];
 
 @NgModule({
