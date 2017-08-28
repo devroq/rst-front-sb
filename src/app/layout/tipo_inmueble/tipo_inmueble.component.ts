@@ -6,16 +6,13 @@ import { Location } from '@angular/common';
 import { Tipo_inmueble } from './tipo_inmueble';
 import { TipoInmuebleService } from './tipo_inmueble.service';
  
- 
 @Component({
   selector: 'tipo_inmueble',
   templateUrl: './tipo_inmueble.component.html',
   styleUrls: ['./tipo_inmueble.component.css']
 })
 export class TipoInmuebleComponent implements OnInit {
- 
   tipo_inmueble: Tipo_inmueble;
- 
   constructor(
     private tipoInmuebleService: TipoInmuebleService,
     private route: ActivatedRoute,

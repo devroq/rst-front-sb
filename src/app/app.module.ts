@@ -7,13 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 
-import { TipoInmuebleComponent } from './tipo_inmueble/tipo_inmueble.component';
-import { TipoInmuebleService } from './tipo_inmueble/tipo_inmueble.service';
-
 @NgModule({
     declarations: [
-        AppComponent,
-        TipoInmuebleComponent,        
+        AppComponent,        
     ],
     imports: [
         BrowserModule,
@@ -22,7 +18,7 @@ import { TipoInmuebleService } from './tipo_inmueble/tipo_inmueble.service';
         HttpModule,
         AppRoutingModule,
     ],
-    providers: [AuthGuard,TipoInmuebleService,],
+    providers: [AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -7,8 +7,10 @@ import { TipoInmuebleComponent } from './tipo_inmueble.component';
 @NgModule({
   imports: [
     CommonModule,
-    TipoInmuebleModule
+    TipoInmuebleRoutingModule
   ],
   declarations: [TipoInmuebleComponent]
 })
-export class TipoInmuebleModule { }
+export class TipoInmuebleModule { 
+  
+}

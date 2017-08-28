@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { TipoInmuebleComponent } from './tipo_inmueble.component';
 
 const routes: Routes = [
-    { path: '', component: TipoInmuebleComponent }
+    { path: '/tipo_inmueble', component: TipoInmuebleComponent }
 ];
 
 @NgModule({
