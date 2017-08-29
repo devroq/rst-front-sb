@@ -15,6 +15,8 @@ import { routerTransition } from '../../router.animations';
 })
 export class TipoInmuebleComponent implements OnInit {
   tipo_inmueble: Tipo_inmueble;
+  tipos_inmueble:Tipo_inmueble[]; 
+
   constructor(
     private tipoInmuebleService: TipoInmuebleService,
     private route: ActivatedRoute,
@@ -22,8 +24,8 @@ export class TipoInmuebleComponent implements OnInit {
   ) {     
   }
   ngOnInit(): void {
-    this.route.params.switchMap((params: Params) => this.tipoInmuebleService.getTipoInmueble(+params['id']))
-      .subscribe(tipo_inmueble => this.tipo_inmueble = tipo_inmueble);
+    this.route.params.switchMap((params: Params) => this.tipoInmuebleService.getTiposInmueble())
+    .subscribe(tipos_inmueble => this.tipos_inmueble = tipos_inmueble);
   }
   updateTipoInmueble(): void {
     this.tipoInmuebleService.updateTipoInmueble(this.tipo_inmueble);

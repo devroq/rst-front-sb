@@ -9,7 +9,7 @@ export class TipoInmuebleService {
   constructor(private http: Http) {}
  
   private headers = new Headers({ 'Content-Type': 'application/json' });
-  private tiposInmuebleUrl = 'api/tipo_inmueble';
+  private tiposInmuebleUrl = 'http://rst-back.com/api/tipos_inmueble';
  
   getTiposInmueble(): Promise<Tipo_inmueble[]> {
     return this.http.get(this.tiposInmuebleUrl)
