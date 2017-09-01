@@ -15,17 +15,14 @@ import { routerTransition } from '../../router.animations';
 })
 export class TipoInmuebleComponent implements OnInit {
   tipo_inmueble: Tipo_inmueble;
-  tipos_inmueble:Tipo_inmueble[] = [{"id":1,"nombre":"DESDE"},{"id":2,"nombre":"EL"},{"id":3,"nombre":"CONTROLADOR"}]; 
-
+  tipos_inmueble:Tipo_inmueble[]; 
   constructor(
     private tipoInmuebleService: TipoInmuebleService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
   ngOnInit(): void {
-    this.tipoInmuebleService.getTiposInmueble().then(
-      rs => this.tipos_inmueble = rs
-    );
+    this.tipoInmuebleService.getTiposInmueble().then(rs => this.tipos_inmueble = rs);
   }
   updateTipoInmueble(): void {
     this.tipoInmuebleService.updateTipoInmueble(this.tipo_inmueble);

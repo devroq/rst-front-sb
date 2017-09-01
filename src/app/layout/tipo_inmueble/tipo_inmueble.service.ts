@@ -18,7 +18,6 @@ export class TipoInmuebleService {
       .then(response => response.json().data as Tipo_inmueble[])
       .catch(this.handleError);
   }
- 
   getTipoInmueble(id: number): Promise<Tipo_inmueble> {
     const url = `${this.tiposInmuebleUrl}/${id}`;
     return this.http.get(url)
@@ -26,7 +25,6 @@ export class TipoInmuebleService {
       .then(response => response.json().data as Tipo_inmueble)
       .catch(this.handleError);
   }
- 
   createCrearTipoInmueble(tipo_inmueble: Tipo_inmueble): Promise<Tipo_inmueble> {
     return this.http
       .post(this.tiposInmuebleUrl, JSON.stringify(tipo_inmueble), { headers: this.headers })

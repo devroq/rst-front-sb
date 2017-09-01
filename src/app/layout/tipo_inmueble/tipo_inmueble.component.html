@@ -1,9 +1,18 @@
 <div [@routerTransition]>
     <h2>Tipos</h2>
-    <ul>
-        <li *ngFor="let tipo_inmueble of tipos_inmueble">
-            <span class="badge badge-primary">{{ tipo_inmueble.id }}</span>
-            <span class="badge badge-primary">{{ tipo_inmueble.nombre }}</span>          
-        </li>
-    </ul>
+    <table class="table table-strip">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tipo_inmueble of tipos_inmueble">
+                <td>{{ tipo_inmueble.id }}</td>
+                <td>{{ tipo_inmueble.nombre }}</td>          
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-sm btn-primary">Agregar Nuevo</button>    
 </div>
