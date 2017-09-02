@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TipoInmuebleComponent } from './tipo_inmueble.component';
+import { TipoInmuebleListComponent } from './tipo_inmueble_list.component';
 
 const routes: Routes = [
-    { path: '', component: TipoInmuebleComponent }
+    {path:'',component:TipoInmuebleListComponent}
+    {path:'detail/:id',component:TipoInmuebleDetailComponent},
 ];
 
 @NgModule({

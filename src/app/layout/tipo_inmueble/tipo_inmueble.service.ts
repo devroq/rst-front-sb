@@ -8,7 +8,6 @@ import { Tipo_inmueble } from './tipo_inmueble';
  
 export class TipoInmuebleService {
   constructor(private http: Http) {}
- 
   private headers = new Headers({ 'Content-Type': 'application/json' });
   private tiposInmuebleUrl = 'http://rst-back.com/api/tipos_inmueble';
  
@@ -32,7 +31,6 @@ export class TipoInmuebleService {
       .then(res => res.json().data as Tipo_inmueble)
       .catch(this.handleError);
   }
- 
   updateTipoInmueble(tipo_inmueble: Tipo_inmueble): Promise<Tipo_inmueble> {
     const url = `${this.tiposInmuebleUrl}/${tipo_inmueble.id}`;
     return this.http

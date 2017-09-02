@@ -8,12 +8,12 @@ import { routerTransition } from '../../router.animations';
  
 @Component({
     selector: 'tipo_inmueble',
-    templateUrl: './tipo_inmueble.component.html',
+    templateUrl: './tipo_inmueble_list.component.html',
     styleUrls: ['./tipo_inmueble.component.css'],
     animations: [routerTransition()],
     providers: [TipoInmuebleService],
 })
-export class TipoInmuebleComponent implements OnInit {
+export class TipoInmuebleListComponent implements OnInit {
   tipo_inmueble: Tipo_inmueble;
   tipos_inmueble:Tipo_inmueble[]; 
   constructor(
