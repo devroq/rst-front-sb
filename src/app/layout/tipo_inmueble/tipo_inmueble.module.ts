@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PageHeaderModule } from './../../shared';
 
 import { TipoInmuebleRoutingModule } from './tipo_inmueble-routing.module';
-import { TipoInmuebleComponent } from './tipo_inmueble.component';
+import { TipoInmuebleListComponent } from './list/tipo_inmueble_list.component';
 
 @NgModule({
   imports: [
@@ -11,8 +11,6 @@ import { TipoInmuebleComponent } from './tipo_inmueble.component';
     TipoInmuebleRoutingModule,
     PageHeaderModule
   ],
-  declarations: [TipoInmuebleComponent]
+  declarations: [TipoInmuebleListComponent]
 })
-export class TipoInmuebleModule { 
-  
-}
+export class TipoInmuebleModule {}

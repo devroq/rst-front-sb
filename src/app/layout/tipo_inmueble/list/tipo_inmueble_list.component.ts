@@ -1,14 +1,13 @@
-import 'rxjs/add/operator/switchMap'
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
-import { Tipo_inmueble } from './tipo_inmueble';
-import { TipoInmuebleService } from './tipo_inmueble.service';
-import { routerTransition } from '../../router.animations';
+import { Tipo_inmueble } from '../tipo_inmueble';
+import { TipoInmuebleService } from '../tipo_inmueble.service';
+import { routerTransition } from '../../../router.animations';
  
 @Component({
-    selector: 'tipo_inmueble',
-    templateUrl: './tipo_inmueble_list.component.html',
+    selector: 'tipo_inmueble_list',
+    templateUrl: './tipo_inmueble.component.html',
     styleUrls: ['./tipo_inmueble.component.css'],
     animations: [routerTransition()],
     providers: [TipoInmuebleService],

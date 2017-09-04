@@ -10,7 +10,6 @@ export class TipoInmuebleService {
   constructor(private http: Http) {}
   private headers = new Headers({ 'Content-Type': 'application/json' });
   private tiposInmuebleUrl = 'http://rst-back.com/api/tipos_inmueble';
- 
   getTiposInmueble(): Promise<Tipo_inmueble[]> {
     return this.http.get(this.tiposInmuebleUrl)
       .toPromise()
@@ -24,7 +23,7 @@ export class TipoInmuebleService {
       .then(response => response.json().data as Tipo_inmueble)
       .catch(this.handleError);
   }
-  createCrearTipoInmueble(tipo_inmueble: Tipo_inmueble): Promise<Tipo_inmueble> {
+  createTipoInmueble(tipo_inmueble: Tipo_inmueble): Promise<Tipo_inmueble> {
     return this.http
       .post(this.tiposInmuebleUrl, JSON.stringify(tipo_inmueble), { headers: this.headers })
       .toPromise()
@@ -39,7 +38,6 @@ export class TipoInmuebleService {
       .then(() => tipo_inmueble)
       .catch(this.handleError);
   }
- 
   deleteTipoInmueble(tipo_inmueble: Tipo_inmueble): Promise<void> {
     const url = `${this.tiposInmuebleUrl}/${tipo_inmueble.id}`;
     return this.http.delete(url, { headers: this.headers })
@@ -47,7 +45,6 @@ export class TipoInmuebleService {
       .then(() => null)
       .catch(this.handleError);
   }
- 
   private handleError(error: any): Promise<any> {
     console.error('Ocurrio un error:', error);
     return Promise.reject(error.message || error);
