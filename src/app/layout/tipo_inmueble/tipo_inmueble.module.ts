@@ -4,6 +4,7 @@ import { PageHeaderModule } from './../../shared';
 
 import { TipoInmuebleRoutingModule } from './tipo_inmueble-routing.module';
 import { TipoInmuebleListComponent } from './list/tipo_inmueble_list.component';
+import { TipoInmuebleFormComponent } from './form/tipo_inmueble_form.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { TipoInmuebleListComponent } from './list/tipo_inmueble_list.component';
     TipoInmuebleRoutingModule,
     PageHeaderModule
   ],
-  declarations: [TipoInmuebleListComponent]
+  declarations: [TipoInmuebleListComponent,TipoInmuebleFormComponent]
 })
 export class TipoInmuebleModule {}

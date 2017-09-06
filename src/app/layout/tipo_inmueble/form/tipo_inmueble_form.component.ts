@@ -13,18 +13,13 @@ import { routerTransition } from '../../../router.animations';
 })
 export class TipoInmuebleFormComponent implements OnInit {
   tipo_inmueble: Tipo_inmueble;
-  tipos_inmueble:Tipo_inmueble[]; 
   constructor(
     private tipoInmuebleService: TipoInmuebleService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
   ngOnInit(): void {
-    this.tipoInmuebleService.getTiposInmueble().then(rs => this.tipos_inmueble = rs);
-  }
-  updateTipoInmueble(): void {
-    this.tipoInmuebleService.updateTipoInmueble(this.tipo_inmueble);
-    this.goBack();
+    this.tipo_inmueble = ["id" => "1"]; 
   }
   goBack(): void {
     this.location.back();
