@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TipoInmuebleComponent } from './tipo_inmueble.component';
+import { TipoInmuebleListComponent } from './list/tipo_inmueble_list.component';
+import { TipoInmuebleFormComponent } from './form/tipo_inmueble_form.component';
 
 const routes: Routes = [
-    {path:'',component:TipoInmuebleComponent},
-    {path:'create',component:TipoInmuebleComponent},
-    {path:'edit/:id',component:TipoInmuebleComponent},
+    {path:'',component:TipoInmuebleListComponent},
+    {path:'add',component:TipoInmuebleFormComponent},
+    {path:'edit/:id',component:TipoInmuebleFormComponent},
 ];
 
 @NgModule({

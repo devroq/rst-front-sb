@@ -7,8 +7,7 @@ import { routerTransition } from '../../../router.animations';
  
 @Component({
     selector: 'tipo_inmueble_list',
-    templateUrl: './tipo_inmueble.component.html',
-    styleUrls: ['./tipo_inmueble.component.css'],
+    templateUrl: './tipo_inmueble_list.component.html',
     animations: [routerTransition()],
     providers: [TipoInmuebleService],
 })
